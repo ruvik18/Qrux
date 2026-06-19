@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { CSSProperties, useState } from "react";
 
 function LogoCornerMarkers() {
-  const s = {
+  const s: CSSProperties = {
     position: "absolute",
     width: "5px",
     height: "5px",

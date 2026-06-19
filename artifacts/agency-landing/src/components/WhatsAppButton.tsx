@@ -20,7 +20,7 @@ export default function WhatsAppButton() {
           initial={{ opacity: 0, scale: 0.7, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.7, y: 20 }}
-          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.96 }}
           style={{

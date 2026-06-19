@@ -69,7 +69,7 @@ function WorkRow({
       className="work-row"
       initial={{ opacity: 0, y: 48 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.7, delay: 0.05, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
       style={{
         borderBottom:
           index < projects.length - 1
@@ -178,7 +178,7 @@ function WorkRow({
         style={{ position: "relative", overflow: "hidden" }}
         initial={{ scale: 1.04 }}
         animate={inView ? { scale: 1 } : {}}
-        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
       >
         <img
           src={project.imageUrl}

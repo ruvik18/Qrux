@@ -1,3 +1,4 @@
+import { CSSProperties } from "react";
 import { motion } from "framer-motion";
 
 const container = {
@@ -12,7 +13,7 @@ const lineReveal = {
   visible: {
     y: "0%",
     opacity: 1,
-    transition: { duration: 0.72, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.72, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
   },
 };
 
@@ -21,12 +22,12 @@ const fadeUp = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
   },
 };
 
 function CornerMarkers() {
-  const s = {
+  const s: CSSProperties = {
     position: "absolute",
     width: "6px",
     height: "6px",
@@ -198,7 +199,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.72, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ delay: 0.72, duration: 0.55, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
           style={{ marginTop: "40px" }}
         >
           <a

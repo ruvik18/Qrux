@@ -38,7 +38,7 @@ export default function FadeIn({
       ref={ref}
       initial={{ opacity: 0, ...dirMap[direction] }}
       animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
-      transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
       className={className}
       style={style}
     >
